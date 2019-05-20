@@ -1,0 +1,29 @@
+{
+  "name": "intro-to-fcc-javascript-algorithms",
+  "version": "0.0.0",
+  "description": "Intro to freeCodeCamp JavaScript Algorithms",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brycejech/Intro-to-FCC-JavaScript-Algorithms.git"
+  },
+  "keywords": [
+    "freeCodeCamp",
+    "FCC",
+    "JavaScript",
+    "JS",
+    "algorithms"
+  ],
+  "author": "Bryce Jech <bryce@brycejech.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brycejech/Intro-to-FCC-JavaScript-Algorithms/issues"
+  },
+  "homepage": "https://github.com/brycejech/Intro-to-FCC-JavaScript-Algorithms#readme",
+  "devDependencies": {
+    "jest": "^24.8.0"
+  }
+}
