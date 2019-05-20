@@ -28,5 +28,3 @@ module.exports = {
     reverse2,
     reverse3
 }
-
-console.log(reverse3('abc'));
