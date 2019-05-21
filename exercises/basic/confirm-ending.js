@@ -10,7 +10,7 @@ function confirmEnding(str, sub){
 function confirmEnding2(str, sub){
     const lastIdx = str.lastIndexOf(sub);
 
-    if(lastIdx <= 0) return false;
+    if(lastIdx < 0) return false;
 
     if(str.length - lastIdx === sub.length) return true;
 }
