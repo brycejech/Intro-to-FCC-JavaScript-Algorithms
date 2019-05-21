@@ -1,7 +1,7 @@
 'use strict';
 
 // One-liner
-const reverse = str => str.split('').reverse().join();
+const reverse = str => str.split('').reverse().join('');
 
 // Reverse iteration
 function reverse2(str){
