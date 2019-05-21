@@ -1,7 +1,7 @@
 'use strict';
 
 function booWho(bool){
-    return typeof bool === 'bolean';
+    return typeof bool === 'boolean';
 }
 
 function booWho2(bool){
