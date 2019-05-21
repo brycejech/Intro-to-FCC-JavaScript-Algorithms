@@ -22,18 +22,24 @@ const tests = [
 fns.forEach(fn => {
 
     describe(`${ fn.name } should properly identify booleans`, () => {
+
+        let alwaysBool = true;
+
         tests.forEach(testCase => {
 
             const type = _type(testCase);
 
-            test(`It should return a boolean`, () => {
-                expect(typeof fn(testCase)).toBe('boolean');
-            });
+            if(typeof fn(testCase) !== 'boolean') alwaysBool = false;
 
             test(`It should work with "${ testCase }" of type "${ type }"`, () => {
                 const isBool = type === 'boolean';
                 expect(fn(testCase)).toBe(isBool ? true : false);
             });
+
+        });
+        
+        test(`It always returns a boolean`, () => {
+            expect(alwaysBool).toBe(true);
         });
     });
 });
