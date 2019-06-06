@@ -1,11 +1,16 @@
 'use strict';
 
-const { booWho, booWho2, booWho3 } = require('./boo-who');
+const mod = require('./boo-who'),
+      fns = Object.keys(mod).map(k => mod[k]);
 
-const fns = [
-    booWho, booWho2, booWho3
-];
+/*
+    TODO
+    ----
 
+    Tests should be objects with an expected result included, rather than rely
+    on the _type helper, which is most certainly also used for implementation
+    of the various booWhos being tested.
+*/
 const tests = [
     'abc',
     123,
@@ -37,7 +42,7 @@ fns.forEach(fn => {
             });
 
         });
-        
+
         test(`It always returns a boolean`, () => {
             expect(alwaysBool).toBe(true);
         });
