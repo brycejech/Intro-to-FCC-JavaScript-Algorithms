@@ -1,8 +1,7 @@
 'use strict';
 
-const { sumAll, sumAll2, sumAll3 } = require('./sum-range');
-
-const fns = [ sumAll, sumAll2, sumAll3 ];
+const mod = require('./sum-range'),
+      fns = Object.keys(mod).map(k => mod[k]);
 
 const tests = [
     { range: [1, 3],  sum: 6  },
