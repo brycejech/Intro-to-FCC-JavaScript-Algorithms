@@ -1,8 +1,7 @@
 'use strict';
 
-const { reverse, reverse2, reverse3 } = require('./reverse-a-string');
-
-const fns = [ reverse, reverse2, reverse3 ];
+const mod = require('./reverse-a-string'),
+      fns = Object.keys(mod).map(k => mod[k]);
 
 const tests = [
     { str: 'JavaScript', reversed: 'tpircSavaJ' },
