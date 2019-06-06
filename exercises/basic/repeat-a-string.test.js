@@ -1,8 +1,7 @@
 'use strict';
 
-const { repeat, repeat2, repeat3, repeat4 } = require('./repeat-a-string');
-
-const fns = [ repeat, repeat2, repeat3, repeat4 ];
+const mod = require('./repeat-a-string'),
+      fns = Object.keys(mod).map(k => mod[k]);
 
 const tests = [
     { str: 'abc',        rounds: 3, result: 'abcabcabc'                      },
