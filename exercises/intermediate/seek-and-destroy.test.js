@@ -1,14 +1,7 @@
 'use strict';
 
-const {
-    destroyer,
-    destroyer2,
-    destroyer3,
-    destroyer4,
-    destroyer5
-} = require('./seek-and-destroy');
-
-const fns = [ destroyer, destroyer2, destroyer3, destroyer4, destroyer5 ];
+const mod = require('./seek-and-destroy'),
+      fns = Object.keys(mod).map(k => mod[k]);
 
 const tests = [
     { args: [ [1, 2, 3], 3 ],           value: [ 1, 2 ]       },
