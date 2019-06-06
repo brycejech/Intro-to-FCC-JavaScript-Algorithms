@@ -1,8 +1,7 @@
 'use strict';
 
-const { factorialize, factorialize2, factorialize3 } = require('./factorialize');
-
-const fns = [ factorialize, factorialize2, factorialize3 ];
+const mod = require('./factorialize'),
+      fns = Object.keys(mod).map(k => mod[k]);
 
 const tests = [
     { num: 5,   factorial: 120              },
