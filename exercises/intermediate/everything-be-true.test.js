@@ -1,13 +1,7 @@
 'use strict';
 
-const {
-    truthCheck,
-    truthCheck2,
-    truthCheck3,
-    truthCheck4
-} = require('./everything-be-true');
-
-const fns = [ truthCheck, truthCheck2, truthCheck3, truthCheck4 ];
+const mod = require('./everything-be-true'),
+      fns = Object.keys(mod).map(k => mod[k]);
 
 const tests = [
     {
