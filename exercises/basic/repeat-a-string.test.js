@@ -8,7 +8,8 @@ const tests = [
     { str: 'spam',       rounds: 4, result: 'spamspamspamspam'               },
     { str: 'eggs',       rounds: 2, result: 'eggseggs'                       },
     { str: 'foo',        rounds: 3, result: 'foofoofoo'                      },
-    { str: 'bloodymary', rounds: 3, result: 'bloodymarybloodymarybloodymary' }
+    { str: 'bloodymary', rounds: 3, result: 'bloodymarybloodymarybloodymary' },
+    { str: 7,            rounds: 3, result: '777'                            }
 ];
 
 fns.forEach(fn => {
