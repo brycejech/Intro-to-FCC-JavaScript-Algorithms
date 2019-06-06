@@ -1,18 +1,7 @@
 'use strict';
 
-const {
-    confirmEnding,
-    confirmEnding2,
-    confirmEnding3,
-    confirmEnding4
-} = require('./confirm-ending');
-
-const fns = [
-    confirmEnding,
-    confirmEnding2,
-    confirmEnding3,
-    confirmEnding4
-];
+const mod = require('./confirm-ending'),
+      fns = Object.keys(mod).map(k => mod[k]);
 
 const tests = [
     { str: 'hello',  sub: 'lo',   result: true  },
