@@ -13,11 +13,7 @@
     This is the simplest, most easy to read solution
 */
 function factorialize(num){
-    let factorial = 1;
 
-    while(num > 1) factorial *= num--;
-
-    return factorial;
 }
 
 /*
@@ -37,11 +33,7 @@ function factorialize(num){
     preferred solution
 */
 function factorialize2(num){
-    let factorial = num, cur = 1;
 
-    while(cur < num) factorial *= cur++;
-
-    return factorial;
 }
 
 /*
@@ -63,7 +55,7 @@ function factorialize2(num){
     Also, the .reduce method is much slower than for/while loops
 */
 function factorialize3(num){
-    return (new Array(num)).fill().reduce((acc, _, i) => acc * (i + 1), 1);
+
 }
 
 module.exports = {

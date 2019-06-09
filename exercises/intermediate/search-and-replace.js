@@ -15,17 +15,7 @@
     idx is positive
 */
 function replace(haystack, needle, replacement){
-    haystack = haystack.split(' ');
 
-    while(~haystack.indexOf(needle)){
-        const idx = haystack.indexOf(needle);
-
-        if(idx >= 0){
-            haystack.splice(idx, 1, replacement);
-        }
-    }
-
-    return haystack.join(' ');
 }
 
 /*
@@ -39,12 +29,7 @@ function replace(haystack, needle, replacement){
     This is the most reliable solution, and is quite easy to read
 */
 function replace2(haystack, needle, replacement){
-    const replaced = haystack
-        .split(' ')
-        .map(str => str === needle ? replacement : str)
-        .join(' ');
 
-    return replaced;
 }
 
 /*
@@ -59,10 +44,7 @@ function replace2(haystack, needle, replacement){
     Running "npm test -- search-and-replace" will reveal this coding error
 */
 function replace3(haystack, needle, replacement){
-    while(~haystack.indexOf(needle)){
-        haystack = haystack.replace(needle, replacement)
-    }
-    return haystack;
+
 }
 
 /*
@@ -82,9 +64,7 @@ function replace3(haystack, needle, replacement){
     an incorrect result
 */
 function replace4(haystack, needle, replacement){
-    const exp = new RegExp(`\\b${ needle }\\b`, 'g');
-
-    return haystack.replace(exp, replacement);
+    
 }
 
 

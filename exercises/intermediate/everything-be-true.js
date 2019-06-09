@@ -13,10 +13,7 @@
     in the array if all objects have a truthy value for the 'pre' property
 */
 function truthCheck(arr, pre){
-    for(let i = 0, len = arr.length; i < len; i++){
-        if(!arr[i][pre]) return false;
-    }
-    return true;
+
 }
 
 /*
@@ -30,10 +27,7 @@ function truthCheck(arr, pre){
     returns as soon as a determination can be made) and it is the most readable.
 */
 function truthCheck2(arr, pre){
-    for(const obj of arr){
-        if(!obj[pre]) return false;
-    }
-    return true;
+
 }
 
 /*
@@ -54,7 +48,7 @@ function truthCheck2(arr, pre){
     returning a result
 */
 function truthCheck3(arr, pre){
-    return arr.filter(o => !o[pre]).length > 0 ? false : true;
+
 }
 
 /*
@@ -67,10 +61,7 @@ function truthCheck3(arr, pre){
     understand. It also has to loop every item to determine the result.
 */
 function truthCheck4(arr, pre){
-    return arr.reduce((acc, o) => {
-        if(!acc) return false;
-        return o[pre] ? true : false;
-    }, true);
+    
 }
 
 module.exports = {

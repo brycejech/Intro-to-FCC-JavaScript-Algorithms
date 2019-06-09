@@ -13,7 +13,7 @@
     of characters in sub that may be valid regex expressions
 */
 function confirmEnding(str, sub){
-    return new RegExp(`${ sub }$`).test(str);
+
 }
 
 /*
@@ -29,11 +29,7 @@ function confirmEnding(str, sub){
     be more reliable given that regex literals shouldn't cause it to break
 */
 function confirmEnding2(str, sub){
-    const lastIdx = str.lastIndexOf(sub);
 
-    if(lastIdx < 0) return false;
-
-    if(str.length - lastIdx === sub.length) return true;
 }
 
 /*
@@ -51,13 +47,7 @@ function confirmEnding2(str, sub){
     the most efficient solution.
 */
 function confirmEnding3(str, sub){
-    const offset = str.length - sub.length;
-
-    for(let i = sub.length - 1; i >= 0; i--){
-        if(sub[i] !== str[i + offset]) return false;
-    }
-
-    return true;
+    
 }
 
 /*

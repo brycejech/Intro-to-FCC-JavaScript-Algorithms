@@ -14,10 +14,7 @@
     for Array.prototype.slice.call().
 */
 function destroyer(arr){
-    var args = [].slice.call(arguments).slice(1);
 
-    // Note use of tilde operator (Bitwise NOT)
-    return arr.filter(item => !~args.indexOf(item));
 }
 
 /*
@@ -32,9 +29,7 @@ function destroyer(arr){
     is much more readable, and is equivalent to the ES5 solution
 */
 function destroyer2(arr){
-    const args = Array.from(arguments).slice(1);
 
-    return arr.filter(item => !args.includes(item));
 }
 
 /*
@@ -46,7 +41,7 @@ function destroyer2(arr){
     ES6 spread operator to capture the remaining arguments so we don't have to
     splice the result, which is nice.
 */
-const destroyer3 = (arr, ...args) => arr.filter(n => !args.includes(n));
+const destroyer3 = (arr, ...args) => undefined;
 
 /*
     Array.prototype.forEach Solution
@@ -64,13 +59,7 @@ const destroyer3 = (arr, ...args) => arr.filter(n => !args.includes(n));
     a good solution.
 */
 function destroyer4(arr, ...args){
-    const result = [];
 
-    arr.forEach(item => {
-        if(args.includes(item)) return;
-        result.push(item);
-    });
-    return result;
 }
 
 /*
@@ -83,13 +72,7 @@ function destroyer4(arr, ...args){
     statement to move on to the next iteration.
 */
 function destroyer5(arr, ...args){
-    const result = [];
-
-    for(let i = 0, len = arr.length; i < len; i++){
-        if(args.includes(arr[i])) continue;
-        result.push(arr[i]);
-    }
-    return result;
+    
 }
 
 module.exports = {

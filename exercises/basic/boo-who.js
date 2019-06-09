@@ -7,7 +7,7 @@
     Use the 'typeof' operator to check if bool is a boolean and return the result
 */
 function booWho(bool){
-    return typeof bool === 'boolean';
+
 }
 
 /*
@@ -33,7 +33,7 @@ function booWho(bool){
         - Object.prototype.toString.call(undefined) // '[object Undefined]'
 */
 function booWho2(bool){
-    return Object.prototype.toString.call(bool) === '[object Boolean]';
+
 }
 
 /*
@@ -45,7 +45,7 @@ function booWho2(bool){
     This solution is equally as overkill as solution 2 for this given problem
 */
 function booWho3(bool){
-    return _type(bool) === 'boolean';
+
 }
 
 function _type(thing){

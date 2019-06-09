@@ -11,7 +11,7 @@
 
     This is the most common and recommended approach to solving this problem
 */
-const reverse = str => str.split('').reverse().join('');
+const reverse = str => undefined;
 
 /*
     For-loop Solution
@@ -23,11 +23,7 @@ const reverse = str => str.split('').reverse().join('');
     3. Return the result
 */
 function reverse2(str){
-    let reversed = '';
 
-    for(let i = str.length - 1; i >= 0; i--) reversed += str[i];
-
-    return reversed;
 }
 
 /*
@@ -40,11 +36,7 @@ function reverse2(str){
     3. Return the result
 */
 function reverse3(str){
-    let reversed = '';
-
-    for(const char of str.split('')) reversed = `${ char }${ reversed }`;
-
-    return reversed;
+    
 }
 
 module.exports = {

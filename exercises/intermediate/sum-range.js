@@ -14,13 +14,7 @@
     passed to the _range helper
 */
 function sumAll(range){
-    range = _range.apply(null, range);
 
-    let sum = 0;
-
-    for(let num of range) sum += num;
-
-    return sum;
 }
 
 /*
@@ -42,7 +36,7 @@ function sumAll(range){
     breaking it up over several lines of code
 */
 function sumAll2(range){
-    return _range.apply(null, range).reduce((acc, num) => acc + num);
+
 }
 
 /*
@@ -68,13 +62,7 @@ function sumAll2(range){
     In most circumstances, this is the solution I would probably choose
 */
 function sumAll3(range){
-    let [start, end] = range, sum = 0;
-
-    if(start > end) [ start, end ] = [ end, start ];
-
-    while(start <= end) sum += start++;
-
-    return sum;
+    
 }
 
 /*
